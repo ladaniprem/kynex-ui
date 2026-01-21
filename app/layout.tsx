@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css"; 
+import "./globals.css";
 import { ViewTransitions } from "next-view-transitions"
-
+import { ThemeProvider } from "@/components/provider/theme-provider";
+//import { RootProvider } from "fumadocs-ui/provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,14 +25,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-    </ViewTransitions>
+    <>
+      {/* <html lang="en" suppressHydrationWarning/> */}
+      <ViewTransitions>
+        <html lang="en" suppressHydrationWarning>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+               <div className="flex flex-col min-h-screen">
+              <div className="flex-1">{children}</div>
+              </div>
+            </ThemeProvider>
+          </body>
+        </html>
+      </ViewTransitions>
+    </>
   );
 }

@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { Flame } from 'lucide-react'
 import { Link as ViewTransitionsLink } from 'next-view-transitions'
-import { Liquid } from '../liquid-gradient'
+import { Badge } from '@/components/ui/badge'
+import { ThemeToggle } from '../ui/theme-toggle'
 function Header() {
   return (
     <>
@@ -24,7 +25,7 @@ function Header() {
                 {/* Logo Section */}
                 <div className='flex items-center '>
                   <Link href={"/"} className='flex items-center gap-2'>
-                    <Flame className='w-6 h-6 text-green-500 dark:text-green-400' />
+                    <Flame className='w-6 h-6 text-red-500 dark:text-red-400' />
                     <span className='hidden sm:block font-semibold'>
                       Kynex UI
                     </span>
@@ -50,22 +51,17 @@ function Header() {
                   >
                     Templates
                   </Link>
-                  <a
-                    href="https://github.com/ui-layouts/uilayouts"
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors flex items-center gap-2'
-                  >
-                    Templates
-                    <span className='relative'>
-                      <span className='text-xs px-2 py-0.5 rounded-full'>
-                        <Liquid isHovered={false} colors={{ color1: '#10b981', color2: '#3b82f6', color3: '#8b5cf6', color4: '#ec4899', color5: '#f59e0b', color6: '#10b981', color7: '#3b82f6', color8: '#8b5cf6', color9: '#ec4899', color10: '#f59e0b', color11: '#10b981', color12: '#3b82f6', color13: '#8b5cf6', color14: '#ec4899', color15: '#f59e0b', color16: '#10b981', color17: '#3b82f6' }} />
-                      </span>
-                      <span className='absolute inset-0 flex items-center justify-center text-xs'>new</span>
-                    </span>
-                  </a>
+                  <Badge variant="brand">
+                    new
+                  </Badge>
                 </div>
                 {/*Right side items*/}
+                <div className="hidden sm:flex items-center gap-3">
+                  <span className='text-zinc-300 dark:text-zinc-700'>
+                    |
+                  </span>
+                  <ThemeToggle/>
+                </div>
               </div>
             </div>
           </div>
