@@ -5,6 +5,7 @@ import { useState } from "react";
 import Nextjs from "@/components/icons/nextjs";
 import ReactIcon from "@/components/icons/react";
 import ShadcnIcon from "@/components/icons/shadcn";
+import Motion from "../icons/motion";
 
 type FeatureItemProps = {
   label: string;
@@ -85,7 +86,7 @@ export default function Features() {
           setHoveredItem={setHoveredItem}
           className="text-yellow-500"
         >
-          <span className="text-2xl">⚡</span>
+          <Motion className="w-8 h-8 text-black dark:text-white" />
         </FeatureItem>
 
         {/* shadcn/ui */}
