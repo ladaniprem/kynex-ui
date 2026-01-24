@@ -41,30 +41,30 @@ const defaultProfile = {
     members: [
         {
             id: "1",
-            name: "Sarah Chen",
+            name: "goo kim",
             role: "Lead Designer",
             location: "San Francisco, CA",
-            email: "sarah@example.com",
+            email: "gookim@example.com",
             avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",
             availability: "available",
             skills: ["UI Design", "Design Systems", "User Research"],
             social: {
-                github: "sarahchen",
-                linkedin: "sarahchen",
+                github: "gookim",
+                linkedin: "gookim",
             },
         },
         {
             id: "2",
-            name: "Mike Wilson",
+            name: "jemes lee",
             role: "Senior Designer",
             location: "London, UK",
-            email: "mike@example.com",
+            email: "jemeslee@example.com",
             avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
             availability: "busy",
             skills: ["Product Design", "Prototyping", "Animation"],
             social: {
-                github: "mikewilson",
-                linkedin: "mikewilson",
+                github: "jemeslee",
+                linkedin: "jemeslee",
             },
         },
     ],
@@ -169,7 +169,7 @@ export default function Profile05({
                                         <div className="flex items-center gap-2">
                                             {member.social.github && (
                                                 <a
-                                                    href="https://github.com/kokonut-labs/codesnippetui"
+                                                    href={`https://github.com/${member.social.github}`}
                                                     target="_blank"
                                                     className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400"
                                                 >
@@ -178,7 +178,7 @@ export default function Profile05({
                                             )}
                                             {member.social.linkedin && (
                                                 <a
-                                                    href="#"
+                                                    href={`https://linkedin.com/in/${member.social.linkedin}`}
                                                     className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400"
                                                 >
                                                     <Linkedin className="w-4 h-4" />

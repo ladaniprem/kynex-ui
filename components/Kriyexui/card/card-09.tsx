@@ -40,7 +40,7 @@ export default function Card09({
         amount: subtotal * 0.1, // 10% discount
     },
     total = subtotal + tax + shipping - discount.amount,
-    currency = "USD",
+    currency = "INR",
 }: Card09Props) {
     const formatPrice = (amount: number) => {
         return new Intl.NumberFormat("en-US", {

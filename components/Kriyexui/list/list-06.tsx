@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Heart, MessageCircle, MoreHorizontal } from "lucide-react";
+import Image from "next/image";
 
 export default function List06() {
     return (
@@ -14,7 +15,7 @@ export default function List06() {
             <div className="p-4 border-b border-zinc-200 dark:border-zinc-800">
                 <div className="flex items-center justify-between mb-2.5">
                     <div className="flex items-center gap-2">
-                        <img
+                        <Image
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png"
                             alt="Author"
                             className="w-8 h-8 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800"
@@ -40,7 +41,7 @@ export default function List06() {
                 </div>
                 <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-normal">
                     The new AI features in Figma are incredible! Just tried the
-                    new variables system - it's a game changer for design
+                    new variables system - it&apos;s a game changer for design
                     systems. 🎨
                 </p>
             </div>
@@ -48,7 +49,7 @@ export default function List06() {
             <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
                 <div className="p-4">
                     <div className="flex gap-3">
-                        <img
+                        <Image
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png"
                             alt="Responder"
                             className="w-7 h-7 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800 flex-none"
@@ -90,7 +91,7 @@ export default function List06() {
 
                 <div className="p-4 pl-12">
                     <div className="flex gap-3">
-                        <img
+                        <Image
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png"
                             alt="Responder"
                             className="w-7 h-7 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800 flex-none"
@@ -107,7 +108,7 @@ export default function List06() {
                             </div>
                             <p className="text-sm text-zinc-600 dark:text-zinc-300">
                                 Have you tried the new component variants?
-                                They're perfect for theming!
+                                They&apos;re perfect for theming!
                             </p>
                             <div className="flex items-center gap-3">
                                 <button
@@ -131,7 +132,7 @@ export default function List06() {
 
                 <div className="p-3">
                     <div className="flex items-center gap-2">
-                        <img
+                        <Image
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-03-JateJIUhtd3PXynaMG9TDWQ55j5AVP.png"
                             alt="Your avatar"
                             className="w-7 h-7 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800"

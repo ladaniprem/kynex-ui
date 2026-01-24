@@ -70,7 +70,7 @@ export default function AIInput_10() {
         []
     );
 
-    useClickOutside(menuRef as RefObject<HTMLElement>   , () => {
+    useClickOutside(menuRef as RefObject<HTMLElement>, () => {
         if (state.isMenuOpen) updateState({ isMenuOpen: false });
         if (state.isModelMenuOpen) updateState({ isModelMenuOpen: false });
     });
@@ -191,25 +191,21 @@ export default function AIInput_10() {
 
                             {state.isMenuOpen && (
                                 <div className="absolute left-0 top-full mt-1 bg-white dark:bg-zinc-800 rounded-md shadow-lg py-1 min-w-[140px] z-50 border border-black/10 dark:border-white/10">
-                                    {[
-                                        {
-                                            icon: File,
-                                            label: "Upload File",
-                                            onClick: () =>
-                                                fileInputRef.current?.click(),
-                                        },
-                                        { icon: Camera, label: "Take Photo" },
-                                    ].map(({ icon: Icon, label, onClick }) => (
-                                        <button
-                                            type="button"
-                                            key={label}
-                                            onClick={onClick}
-                                            className="w-full px-3 py-1.5 flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 text-sm transition-colors dark:text-white"
-                                        >
-                                            <Icon className="w-4 h-4 dark:text-white" />
-                                            <span>{label}</span>
-                                        </button>
-                                    ))}
+                                    <button
+                                        type="button"
+                                        onClick={() => fileInputRef.current?.click()}
+                                        className="w-full px-3 py-1.5 flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 text-sm transition-colors dark:text-white"
+                                    >
+                                        <File className="w-4 h-4 dark:text-white" />
+                                        <span>Upload File</span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="w-full px-3 py-1.5 flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 text-sm transition-colors dark:text-white"
+                                    >
+                                        <Camera className="w-4 h-4 dark:text-white" />
+                                        <span>Take Photo</span>
+                                    </button>
                                 </div>
                             )}
                         </div>

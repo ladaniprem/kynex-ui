@@ -31,10 +31,10 @@ export default function Card_10() {
                         />
                         <div>
                             <div className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                                Sarah Johnson
+                               Gun Park
                             </div>
                             <div className="text-xs text-zinc-500 dark:text-zinc-400">
-                                sarah.j@example.com
+                                gun.park@example.com
                             </div>
                         </div>
                     </div>

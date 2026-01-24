@@ -30,41 +30,41 @@ const ACCOUNTS: AccountItem[] = [
         id: "1",
         title: "Main Savings",
         description: "Personal savings",
-        balance: "$8,459.45",
+        balance: "₹8,459.45",
         type: "savings",
     },
     {
         id: "2",
         title: "Checking Account",
         description: "Daily expenses",
-        balance: "$2,850.00",
+        balance: "₹2,850.00",
         type: "checking",
     },
     {
         id: "3",
         title: "Investment Portfolio",
         description: "Stock & ETFs",
-        balance: "$15,230.80",
+        balance: "₹15,230.80",
         type: "investment",
     },
     {
         id: "4",
         title: "Credit Card",
         description: "Pending charges",
-        balance: "$1,200.00",
+        balance: "₹1,200.00",
         type: "debt",
     },
     {
         id: "5",
         title: "Savings Account",
         description: "Emergency fund",
-        balance: "$3,000.00",
+        balance: "₹3,000.00",
         type: "savings",
     },
 ];
 
 export default function List01({
-    totalBalance = "$26,540.25",
+    totalBalance = "₹26,540.25",
     accounts = ACCOUNTS,
     className,
 }: List01Props) {

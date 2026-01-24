@@ -21,7 +21,6 @@ export const Preview = ({ isLoading, imageUrl }: PreviewProps) => {
 
     useEffect(() => {
         if (!isLoading) {
-            setProgress(0);
             return;
         }
 
@@ -37,6 +36,8 @@ export const Preview = ({ isLoading, imageUrl }: PreviewProps) => {
 
         return () => clearInterval(interval);
     }, [isLoading]);
+
+    // Removed effect that synchronously resets progress to avoid cascading renders.
 
     useEffect(() => {
         if (!isLoading) return;
@@ -68,7 +69,7 @@ export const Preview = ({ isLoading, imageUrl }: PreviewProps) => {
                         <div className="w-full h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full overflow-hidden">
                             <div
                                 className="h-full bg-fuchsia-500 transition-all duration-300 ease-linear"
-                                style={{ width: `${progress}%` }}
+                                style={{ width: `${isLoading ? progress : 0}%` }}
                             />
                         </div>
                     </CardContent>

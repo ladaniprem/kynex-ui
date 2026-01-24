@@ -16,11 +16,11 @@ interface Profile04Props {
 }
 
 const defaultProfile = {
-    name: "Kokonut",
+    name: "Kriyex",
     role: "Making apps",
-    avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png",
+    avatar: "https://tse3.mm.bing.net/th/id/OIP.Bxh2xMa5q6QFg9ZnLDFmlgHaMs?rs=1&pid=ImgDetMain&o=7&rm=3",
     subscription: "Maker",
-    email: "hello@codesnippetui.com",
+    email: "hello@kriyex.dev",
     level: 42,
     currentExp: 2800,
     maxExp: 4000,

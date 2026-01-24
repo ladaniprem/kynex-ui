@@ -18,7 +18,7 @@ interface Card02Props {
 }
 
 const defaultProfile = {
-    name: "Eugene K",
+    name: "Alex Johnson",
     role: "Senior Developer",
     image: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",
     status: "Open to Work",
@@ -27,7 +27,7 @@ const defaultProfile = {
         { name: "Backend", level: 4 },
         { name: "DevOps", level: 4 },
     ],
-    portfolio: "github.com/alexchen",
+    portfolio: "github.com/ladaniprem",
 } satisfies Required<Card02Props>;
 
 export default function Card02({

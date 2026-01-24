@@ -23,7 +23,7 @@ interface TagInputProps {
 }
 const defaultKokonutTag: Tag = {
     id: "kokonut-ui",
-    label: "codesnippetui",
+    label: "kriyex-ui",
     color: "bg-indigo-100 text-indigo-700 border border-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-300 dark:border-indigo-700/30",
 };
 
@@ -38,7 +38,7 @@ const tagStyles = {
 
 export default function Input_02({
     onChange,
-    defaultTags = [defaultKokonutTag], // Set codesnippetui as default
+    defaultTags = [defaultKokonutTag], // Set  as default
     suggestions = [
         { id: "nextjs", label: "Next.js" },
         { id: "react", label: "React" },
@@ -239,7 +239,7 @@ export default function Input_02({
                                     )}
                                 >
                                     <Plus className="w-3.5 h-3.5" />
-                                    Create "{input}"
+                                    Create &quot;{input}&quot;
                                 </button>
                             )}
                         </div>

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Play, MoreHorizontal, Heart, Clock, Music2 } from "lucide-react";
+import Image from "next/image";
 
 export default function List05() {
     return (
@@ -16,7 +17,7 @@ export default function List05() {
                 <div className="relative flex items-end h-full">
                     <div className="flex items-center gap-6">
                         <div className="w-24 h-24 rounded-2xl shadow-lg overflow-hidden">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop"
                                 alt="Featured Album"
                                 className="w-full h-full object-cover"
@@ -57,7 +58,7 @@ export default function List05() {
             <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
                 <div className="group flex items-center gap-4 px-6 py-3 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
                     <div className="w-10 h-10 rounded-lg overflow-hidden">
-                        <img
+                        <Image
                             src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop"
                             alt="Album cover"
                             className="w-full h-full object-cover"

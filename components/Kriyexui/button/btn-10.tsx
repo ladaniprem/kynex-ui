@@ -45,8 +45,6 @@ export default function Btn10({
         }
     };
 
-    const Icon = getIcon();
-
     const variants = {
         pill: [
             "rounded-full",
@@ -92,16 +90,42 @@ export default function Btn10({
                     "transition-all duration-200"
                 )}
             >
-                <Icon
-                    className={cn(
-                        "transition-all duration-200",
-                        size === "sm" && "w-3.5 h-3.5",
-                        size === "default" && "w-4 h-4",
-                        size === "lg" && "w-5 h-5",
-                        "group-hover:rotate-[-8deg] group-hover:scale-110",
-                        "group-active:scale-95"
-                    )}
-                />
+                {mode === "light" && (
+                    <Sun
+                        className={cn(
+                            "transition-all duration-200",
+                            size === "sm" && "w-3.5 h-3.5",
+                            size === "default" && "w-4 h-4",
+                            size === "lg" && "w-5 h-5",
+                            "group-hover:rotate-[-8deg] group-hover:scale-110",
+                            "group-active:scale-95"
+                        )}
+                    />
+                )}
+                {mode === "dark" && (
+                    <Moon
+                        className={cn(
+                            "transition-all duration-200",
+                            size === "sm" && "w-3.5 h-3.5",
+                            size === "default" && "w-4 h-4",
+                            size === "lg" && "w-5 h-5",
+                            "group-hover:rotate-[-8deg] group-hover:scale-110",
+                            "group-active:scale-95"
+                        )}
+                    />
+                )}
+                {mode === "system" && (
+                    <Laptop
+                        className={cn(
+                            "transition-all duration-200",
+                            size === "sm" && "w-3.5 h-3.5",
+                            size === "default" && "w-4 h-4",
+                            size === "lg" && "w-5 h-5",
+                            "group-hover:rotate-[-8deg] group-hover:scale-110",
+                            "group-active:scale-95"
+                        )}
+                    />
+                )}
                 {showLabel && <span className="capitalize">{mode}</span>}
             </div>
             <span

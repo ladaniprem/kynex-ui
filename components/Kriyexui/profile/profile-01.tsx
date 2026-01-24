@@ -24,9 +24,9 @@ interface Profile01Props {
 }
 
 const defaultProfile = {
-    name: "John Doe",
+    name: "Gun Park",
     role: "Prompt Engineer",
-    avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
+    avatar: "https://tse3.mm.bing.net/th/id/OIP.Bxh2xMa5q6QFg9ZnLDFmlgHaMs?rs=1&pid=ImgDetMain&o=7&rm=3",
     subscription: "Free Trial",
 } satisfies Required<Profile01Props>;
 

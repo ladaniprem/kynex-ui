@@ -27,7 +27,7 @@ export default function Card03({
     description = "Revamp the design of the website",
     teamMembers = [
         {
-            name: "Alex",
+            name: "Anna",
             role: "Lead Designer",
             avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",
             status: "online",

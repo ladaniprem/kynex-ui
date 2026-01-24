@@ -24,16 +24,21 @@ export default function Btn03({
     ...props
 }: Btn03Props) {
     const [isAttracting, setIsAttracting] = useState(false);
-    const [particles, setParticles] = useState<Particle[]>([]);
+    const generateParticles = useCallback(
+        () =>
+            Array.from({ length: particleCount }, (_, i) => ({
+                id: i,
+                x: Math.random() * 360 - 180,
+                y: Math.random() * 360 - 180,
+            })),
+        [particleCount]
+    );
+    const [particles, setParticles] = useState<Particle[]>(() => generateParticles());
     const particlesControl = useAnimation();
 
     useEffect(() => {
-        const newParticles = Array.from({ length: particleCount }, (_, i) => ({
-            id: i,
-            x: Math.random() * 360 - 180,
-            y: Math.random() * 360 - 180,
-        }));
-        setParticles(newParticles);
+        setParticles(generateParticles());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [particleCount]);
 
     const handleInteractionStart = useCallback(async () => {

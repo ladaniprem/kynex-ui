@@ -32,7 +32,7 @@ const ITEMS: ListItem[] = [
         id: "1",
         title: "iMessage",
         description:
-            'John sent you a message: "Hey, what do you think about..."',
+            'Gun sent you a message: "Hey, what do you think about..."',
         icon: MessageSquare,
         iconStyle: "message",
         time: "now",

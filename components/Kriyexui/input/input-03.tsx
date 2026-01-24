@@ -4,6 +4,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Upload, X, FileText } from "lucide-react";
 import { useFileInput } from "@/hooks/use-file-input";
+import Image from "next/image";
 
 export default function Input_03() {
     const [isDragging, setIsDragging] = useState(false);
@@ -116,7 +117,7 @@ export default function Input_03() {
                         <div className="flex items-center gap-4">
                             {preview ? (
                                 <div className="relative w-16 h-16 rounded-lg overflow-hidden">
-                                    <img
+                                    <Image
                                         src={preview}
                                         alt="Preview"
                                         className="w-full h-full object-cover"

@@ -90,7 +90,7 @@ export default function Pricing_02({
                                             ? "text-white"
                                             : "text-neutral-900 dark:text-white"
                                     )}>
-                                        ${tier.price}
+                                        ₹{tier.price}
                                     </span>
                                     <span className={cn(
                                         "text-sm",

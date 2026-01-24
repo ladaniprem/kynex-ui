@@ -8,6 +8,7 @@ import {
     MoreHorizontal,
     Link as LinkIcon,
 } from "lucide-react";
+import Image from "next/image";
 
 interface Card01Props {
     author?: {
@@ -45,10 +46,10 @@ const defaultProps: Card01Props = {
         timeAgo: "2h ago",
     },
     content: {
-        text: "Just launched CodeSnippet UI! Check out the documentation and let me know what you think 🎨",
+        text: "Just launched Kriyex UI! Check out the documentation and let me know what you think 🎨",
         link: {
-            title: "CodeSnippet UI Documentation",
-            description: "A comprehensive guide to CodeSnippet UI",
+            title: "Kriyex UI Documentation",
+            description: "A comprehensive guide to Kriyex UI",
             icon: <LinkIcon className="w-5 h-5 text-blue-500" />,
         },
     },
@@ -88,9 +89,9 @@ export default function Card_01({
                     <div className="flex items-center justify-between mb-5">
                         <div className="flex items-center gap-4">
                             <div className="relative">
-                                <img
-                                    src={author?.avatar}
-                                    alt={author?.name}
+                                <Image
+                                    src={author?.avatar ?? "/default-avatar.png"}
+                                    alt={author?.name ?? "Author avatar"}
                                     className={cn(
                                         "w-11 h-11 rounded-full",
                                         "ring-2 ring-white dark:ring-zinc-800",

@@ -13,12 +13,12 @@ interface Profile02Props {
 }
 
 const defaultProfile = {
-    name: "Alex Thompson",
+    name: "Gun Park",
     role: "Product Designer",
-    avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
+    avatar: "https://tse3.mm.bing.net/th/id/OIP.Bxh2xMa5q6QFg9ZnLDFmlgHaMs?rs=1&pid=ImgDetMain&o=7&rm=3",
     location: "San Francisco, CA",
     email: "hello@codesnippetui.com",
-    website: "https://ui.codesnipet.dev/",
+    website: "https://ui.kriyex.dev/",
     bio: "Designing interfaces that bridge the gap between complexity and simplicity.",
 } satisfies Required<Profile02Props>;
 

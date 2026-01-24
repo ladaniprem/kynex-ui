@@ -38,7 +38,7 @@ const TRANSACTIONS: Transaction[] = [
     {
         id: "1",
         title: "Apple Store Purchase",
-        amount: "$999.00",
+        amount: "₹999.00",
         type: "outgoing",
         category: "shopping",
         icon: ShoppingCart,
@@ -48,7 +48,7 @@ const TRANSACTIONS: Transaction[] = [
     {
         id: "2",
         title: "Salary Deposit",
-        amount: "$4,500.00",
+        amount: "₹4,500.00",
         type: "incoming",
         category: "transport",
         icon: Wallet,
@@ -58,7 +58,7 @@ const TRANSACTIONS: Transaction[] = [
     {
         id: "3",
         title: "Netflix Subscription",
-        amount: "$15.99",
+        amount: "₹15.99",
         type: "outgoing",
         category: "entertainment",
         icon: CreditCard,

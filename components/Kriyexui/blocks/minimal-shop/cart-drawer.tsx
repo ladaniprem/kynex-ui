@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { X } from "lucide-react";
+import Image from "next/image";
 import { type CartItem } from "./data";
 
 interface CartDrawerProps {
@@ -50,9 +51,11 @@ export function CartDrawer({
                                 key={item.id}
                                 className="flex gap-4 p-3 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg"
                             >
-                                <img
+                                <Image
                                     src={item.image}
                                     alt={item.name}
+                                    width={96}
+                                    height={96}
                                     className="w-24 h-24 object-cover rounded-md"
                                 />
                                 <div className="flex-1 min-w-0">
@@ -83,7 +86,7 @@ export function CartDrawer({
                     <div className="p-4 border-t border-zinc-200 dark:border-zinc-800">
                         <div className="flex justify-between mb-4">
                             <span className="text-base">Total</span>
-                            <span className="text-base font-medium">${total}</span>
+                            <span className="text-base font-medium">₹{total}</span>
                         </div>
                         <button className="w-full py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-base font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors">
                             Checkout
