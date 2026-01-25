@@ -1,35 +1,47 @@
 "use client";
 
-import { useState, useRef, type RefObject } from "react";
+import { useState, useRef, type RefObject, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
-import type { ButtonProps } from "@/components/ui/button";
 import { MousePointerClick } from "lucide-react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface ParticleButtonProps extends ButtonProps {
+interface ParticleButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    children?: ReactNode;
     onSuccess?: () => void;
     successDuration?: number;
+    className?: string;
 }
 
 function SuccessParticles({
     buttonRef,
+    particleOffsets,
 }: {
     buttonRef: React.RefObject<HTMLButtonElement>;
+    particleOffsets: { x: number; y: number }[];
 }) {
-    const rect = buttonRef.current?.getBoundingClientRect();
-    if (!rect) return null;
+    const [center, setCenter] = useState<{ x: number; y: number } | null>(null);
 
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
+    useEffect(() => {
+        if (buttonRef.current) {
+            const rect = buttonRef.current.getBoundingClientRect();
+            setCenter({
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2,
+            });
+        }
+    }, [buttonRef]);
+
+    if (!center) return null;
 
     return (
         <AnimatePresence>
-            {[...Array(6)].map((_, i) => (
+            {particleOffsets.map((offset, i) => (
                 <motion.div
                     key={i}
                     className="fixed w-1 h-1 bg-black dark:bg-white rounded-full"
-                    style={{ left: centerX, top: centerY }}
+                    style={{ left: center.x, top: center.y }}
                     initial={{
                         scale: 0,
                         x: 0,
@@ -37,8 +49,8 @@ function SuccessParticles({
                     }}
                     animate={{
                         scale: [0, 1, 0],
-                        x: [0, (i % 2 ? 1 : -1) * (Math.random() * 50 + 20)],
-                        y: [0, -Math.random() * 50 - 20],
+                        x: [0, offset.x],
+                        y: [0, offset.y],
                     }}
                     transition={{
                         duration: 0.6,
@@ -60,10 +72,26 @@ export default function ParticleButton({
     ...props
 }: ParticleButtonProps) {
     const [showParticles, setShowParticles] = useState(false);
+    const [particleOffsets, setParticleOffsets] = useState<{ x: number; y: number }[]>([]);
     const buttonRef = useRef<HTMLButtonElement>(null);
 
-    const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    const generateOffsets = () => {
+        return [...Array(6)].map((_, i) => ({
+            x: (i % 2 ? 1 : -1) * (Math.random() * 50 + 20),
+            y: -Math.random() * 50 - 20,
+        }));
+    };
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setParticleOffsets(generateOffsets());
         setShowParticles(true);
+
+        if (onClick) {
+            onClick(e);
+        }
+        if (onSuccess) {
+            onSuccess();
+        }
 
         setTimeout(() => {
             setShowParticles(false);
@@ -75,6 +103,7 @@ export default function ParticleButton({
             {showParticles && (
                 <SuccessParticles
                     buttonRef={buttonRef as RefObject<HTMLButtonElement>}
+                    particleOffsets={particleOffsets}
                 />
             )}
             <Button

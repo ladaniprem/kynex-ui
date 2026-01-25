@@ -3,6 +3,7 @@
 import { VerifiedIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ReplyProps {
     authorName: string;
@@ -26,7 +27,7 @@ interface TweetCardProps {
 export default function TweetCard({
     authorName = "Dorian",
     authorHandle = "dorian_baffier",
-    authorImage = "https://pbs.twimg.com/profile_images/1854916060807675904/KtBJsyWr_400x400.jpg",
+    authorImage = "https://cdn.britannica.com/85/272885-050-6E6CA766/Portrait-of-English-poet-John-Gray-supposedly-inspiration-for-Dorian-Gray-character.jpg",
     content = [
         "All components from codesnippetui can now be open in @v0 🎉",
         "1. Click on 'Open in V0'",
@@ -47,7 +48,7 @@ export default function TweetCard({
 }: TweetCardProps) {
     return (
         <Link
-            href="https://x.com/dorian_baffier/status/1880291036410572934"
+            href="https://pbs.twimg.com/profile_images/1992215290936205312/N_EuwLUO_400x400.jpg"
             target="_blank"
         >
             <div
@@ -77,7 +78,7 @@ export default function TweetCard({
                     <div className="flex gap-3">
                         <div className="shrink-0">
                             <div className="h-10 w-10 rounded-full overflow-hidden">
-                                <img
+                                <Image
                                     src={authorImage}
                                     alt={authorName}
                                     className="h-full w-full object-cover"
@@ -142,7 +143,7 @@ export default function TweetCard({
                             <div className="flex gap-3">
                                 <div className="shrink-0">
                                     <div className="h-10 w-10 rounded-full overflow-hidden">
-                                        <img
+                                        <Image
                                             src={reply.authorImage}
                                             alt={reply.authorName}
                                             className="h-full w-full object-cover"

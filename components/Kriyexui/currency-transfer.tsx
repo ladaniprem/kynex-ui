@@ -245,7 +245,7 @@ export default function CurrencyTransfer() {
                           transition: { duration: 0.2 },
                         }}
                       >
-                        500.00 USD
+                        500.00 INR
                       </motion.span>
                     </div>
                   </div>
@@ -298,7 +298,7 @@ export default function CurrencyTransfer() {
                           transition: { duration: 0.2 },
                         }}
                       >
-                        460.00 EUR
+                        4.64 EUR
                       </motion.span>
                     </div>
                   </div>
@@ -318,7 +318,7 @@ export default function CurrencyTransfer() {
               transition: { duration: 0.2 },
             }}
           >
-            Exchange Rate: 1 USD = 0.92 EUR
+            Exchange Rate: 1 INR = 0.0093 EUR
           </motion.div>
 
           <AnimatePresence>
@@ -337,7 +337,7 @@ export default function CurrencyTransfer() {
                   </div>
                   <div className="flex justify-between">
                     <span>Fee:</span>
-                    <span className="text-zinc-900 dark:text-zinc-100">2.50 USD</span>
+                    <span className="text-zinc-900 dark:text-zinc-100">250 INR</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Transaction ID:</span>

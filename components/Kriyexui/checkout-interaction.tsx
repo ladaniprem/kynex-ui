@@ -270,7 +270,7 @@ export default function CheckoutInteraction({
                                                 layout
                                                 className="text-xs text-zinc-500 dark:text-zinc-400"
                                             >
-                                                $
+                                                ₹
                                                 {(
                                                     item.price * item.quantity
                                                 ).toFixed(2)}
