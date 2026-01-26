@@ -151,7 +151,7 @@ export default function Pricing_04() {
                             <div className="mb-4">
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-4xl font-bold">
-                                        ${isYearly ? tier.price.yearly : tier.price.monthly}
+                                        ₹{isYearly ? tier.price.yearly : tier.price.monthly}
                                     </span>
                                     <span className="text-zinc-500 text-sm">
                                         /{isYearly ? "year" : "month"}

@@ -3,7 +3,6 @@
 import { VerifiedIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
 
 interface ReplyProps {
     authorName: string;
@@ -29,7 +28,7 @@ export default function TweetCard({
     authorHandle = "dorian_baffier",
     authorImage = "https://cdn.britannica.com/85/272885-050-6E6CA766/Portrait-of-English-poet-John-Gray-supposedly-inspiration-for-Dorian-Gray-character.jpg",
     content = [
-        "All components from codesnippetui can now be open in @v0 🎉",
+        "All components from Kriyex UI can now be open in @v0 🎉",
         "1. Click on 'Open in V0'",
         "2. Customize with prompts",
         "3. Deploy to your app",
@@ -78,7 +77,7 @@ export default function TweetCard({
                     <div className="flex gap-3">
                         <div className="shrink-0">
                             <div className="h-10 w-10 rounded-full overflow-hidden">
-                                <Image
+                                <img
                                     src={authorImage}
                                     alt={authorName}
                                     className="h-full w-full object-cover"
@@ -143,7 +142,7 @@ export default function TweetCard({
                             <div className="flex gap-3">
                                 <div className="shrink-0">
                                     <div className="h-10 w-10 rounded-full overflow-hidden">
-                                        <Image
+                                        <img
                                             src={reply.authorImage}
                                             alt={reply.authorName}
                                             className="h-full w-full object-cover"

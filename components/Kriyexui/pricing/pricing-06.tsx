@@ -150,7 +150,7 @@ export default function Pricing_06({
                             {/* Price */}
                             <div className="mb-6 font-handwritten">
                                 <span className="text-4xl font-bold text-zinc-900 dark:text-white">
-                                    ${tier.price}
+                                    ₹{tier.price}
                                 </span>
                                 <span className="text-zinc-600 dark:text-zinc-400">
                                     /month

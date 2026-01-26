@@ -10,7 +10,7 @@ export function TechnologyBadges() {
             >
                 <Sparkles className="w-4 h-4 mr-2 text-emerald-500" />
                 <span className="bg-clip-text text-transparent bg-linear-to-r from-zinc-800 to-zinc-600 dark:from-zinc-200 dark:to-zinc-400">
-                    Crafted with Next.js 15 & Tailwind CSS
+                    Crafted with Next.js 16 & Tailwind CSS
                 </span>
             </div>
 

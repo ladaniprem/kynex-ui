@@ -146,7 +146,7 @@ export default function CheckoutInteraction({
                                             </span>
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400">
-                                            <span>${product.price}</span>
+                                            <span>₹{product.price}</span>
                                             <span>•</span>
                                             <span>{product.color}</span>
                                         </div>
@@ -304,7 +304,7 @@ export default function CheckoutInteraction({
                                     willChange
                                     format={{
                                         style: "currency",
-                                        currency: "USD",
+                                        currency: "INR",
                                         minimumFractionDigits: 2,
                                         maximumFractionDigits: 2,
                                         signDisplay: "auto",

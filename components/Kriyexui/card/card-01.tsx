@@ -89,7 +89,7 @@ export default function Card_01({
                     <div className="flex items-center justify-between mb-5">
                         <div className="flex items-center gap-4">
                             <div className="relative">
-                                <Image
+                                <img
                                     src={author?.avatar ?? "/default-avatar.png"}
                                     alt={author?.name ?? "Author avatar"}
                                     className={cn(

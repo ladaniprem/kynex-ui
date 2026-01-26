@@ -67,7 +67,7 @@ export default function Profile04({
                 <div className="flex items-start justify-between mb-6">
                     <div className="flex gap-4">
                         <div className="flex flex-col items-center">
-                            <Image
+                            <img
                                 src={avatar}
                                 alt={name}
                                 width={64}

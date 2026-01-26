@@ -86,7 +86,7 @@ export default function Pricing_01() {
                 <div className="relative p-6 border-b border-zinc-200 dark:border-zinc-800">
                     <div className="flex items-baseline gap-1">
                         <span className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
-                            $49
+                            ₹49
                         </span>
                         <span className="text-sm text-zinc-500">/month</span>
                     </div>

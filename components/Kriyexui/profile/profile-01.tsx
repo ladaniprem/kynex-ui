@@ -63,7 +63,7 @@ export default function Profile01({
                 <div className="relative px-6 pt-12 pb-6">
                     <div className="flex items-center gap-4 mb-8">
                         <div className="relative shrink-0">
-                            <Image
+                            <img
                                 src={avatar}
                                 alt={name}
                                 width={72}

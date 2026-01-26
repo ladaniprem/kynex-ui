@@ -15,7 +15,7 @@ export default function List06() {
             <div className="p-4 border-b border-zinc-200 dark:border-zinc-800">
                 <div className="flex items-center justify-between mb-2.5">
                     <div className="flex items-center gap-2">
-                        <Image
+                        <img
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png"
                             alt="Author"
                             className="w-8 h-8 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800"
@@ -49,7 +49,7 @@ export default function List06() {
             <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
                 <div className="p-4">
                     <div className="flex gap-3">
-                        <Image
+                        <img
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png"
                             alt="Responder"
                             className="w-7 h-7 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800 flex-none"
@@ -91,7 +91,7 @@ export default function List06() {
 
                 <div className="p-4 pl-12">
                     <div className="flex gap-3">
-                        <Image
+                        <img
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png"
                             alt="Responder"
                             className="w-7 h-7 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800 flex-none"
@@ -132,7 +132,7 @@ export default function List06() {
 
                 <div className="p-3">
                     <div className="flex items-center gap-2">
-                        <Image
+                        <img
                             src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-03-JateJIUhtd3PXynaMG9TDWQ55j5AVP.png"
                             alt="Your avatar"
                             className="w-7 h-7 rounded-full ring-1 ring-zinc-100 dark:ring-zinc-800"

@@ -98,7 +98,7 @@ export default function Pricing_03() {
                             )}
                         </div>
                         <div className="text-2xl font-bold">
-                            ${isYearly ? plan.price.yearly : plan.price.monthly}
+                            ₹{isYearly ? plan.price.yearly : plan.price.monthly}
                             <span className="text-sm font-normal text-zinc-500">
                                 /{isYearly ? "year" : "month"}
                             </span>

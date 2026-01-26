@@ -54,7 +54,7 @@ export function ProductModal({
                                         {product.category}
                                     </p>
                                 </div>
-                                <p className="text-sm font-medium">${product.price}</p>
+                                <p className="text-sm font-medium">₹{product.price}</p>
                             </div>
                             <div className="space-y-2">
                                 <p className="text-xs text-zinc-600 dark:text-zinc-300">

@@ -72,7 +72,7 @@ export default function Pricing_05() {
                                 )}
                             </div>
                             <div className="flex items-baseline gap-1">
-                                <span className="text-2xl font-semibold">${tier.price}</span>
+                                <span className="text-2xl font-semibold">₹{tier.price}</span>
                                 <span className="text-sm text-zinc-500 dark:text-zinc-400">/month</span>
                             </div>
                             <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">

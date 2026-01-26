@@ -17,7 +17,7 @@ const defaultProfile = {
     role: "Product Designer",
     avatar: "https://tse3.mm.bing.net/th/id/OIP.Bxh2xMa5q6QFg9ZnLDFmlgHaMs?rs=1&pid=ImgDetMain&o=7&rm=3",
     location: "San Francisco, CA",
-    email: "hello@codesnippetui.com",
+    email: "hello@Kariyexui.com",
     website: "https://ui.kriyex.dev/",
     bio: "Designing interfaces that bridge the gap between complexity and simplicity.",
 } satisfies Required<Profile02Props>;
@@ -35,7 +35,7 @@ export default function Profile02({
         <div className="w-full max-w-md mx-auto">
             <div className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-xs">
                 <div className="flex items-start gap-5">
-                    <Image
+                    <img
                         src={avatar}
                         alt={name}
                         width={80}
