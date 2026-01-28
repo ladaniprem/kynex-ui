@@ -3,6 +3,14 @@ import { loader } from "fumadocs-core/source";
 import { icons } from "lucide-react";
 import { createElement } from "react";
 
+interface ExtendedPageData {
+    title: string;
+    description: string;
+    icon?: string;
+    toc?: boolean;
+    full?: boolean;
+}
+
 // Create the proper source structure
 const customSource = {
     files: docs.map((doc: any) => ({
@@ -14,8 +22,8 @@ const customSource = {
             icon: doc.icon,
             toc: doc.toc,
             full: doc.full,
-            body: doc._exports?.default || doc.default
-        }
+        } as ExtendedPageData,
+        content: doc._exports?.default || doc.default
     }))
 };
 
