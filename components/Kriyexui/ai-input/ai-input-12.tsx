@@ -14,19 +14,19 @@ import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea";
 
 const AVATARS = [
     {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",
-        nickname: "Sarah Chen",
+        src: "https://tse3.mm.bing.net/th/id/OIP.6Hce2cgE6tPl90RVGCVyHQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+        nickname: "Gun Park",
     },
     {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
-        nickname: "Michael Johnson",
+        src: "https://th.bing.com/th/id/OIP.iCwbqZRitHSXYUfttZcwdgHaHg?w=182&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+        nickname: "goo Kim",
     },
     {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-03-JateJIUhtd3PXynaMG9TDWQ55j5AVP.png",
-        nickname: "Emma Wilson",
+        src: "https://i.pinimg.com/736x/c2/ce/09/c2ce091ffbfbce056bbb224544720202.jpg",
+        nickname: "daniel park",
     },
     {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png",
+        src: "https://th.bing.com/th/id/OIP.cuuuNBzt1mXJvD4wnk1BVAHaNx?w=182&h=338&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
         nickname: "David Brown",
     },
 ];
@@ -69,6 +69,8 @@ export default function AIInput_12() {
                                                 <img
                                                     src={avatar.src}
                                                     alt={`Avatar ${i + 1}`}
+                                                    width={32}
+                                                    height={32}
                                                     className="w-full h-full object-cover rounded-full border-[1.5px] border-white dark:border-none bg-white dark:bg-transparent ring-2 ring-black/5 dark:ring-0"
                                                 />
                                             </div>
@@ -116,9 +118,8 @@ export default function AIInput_12() {
                 </div>
 
                 <div className="text-xs text-black/50 dark:text-white/50 px-2 py-1">
-                    {`${AVATARS[0].nickname}, ${AVATARS[2].nickname}${
-                        value ? ` and ${AVATARS[3].nickname}` : ""
-                    } are writing...`}
+                    {`${AVATARS[0].nickname}, ${AVATARS[2].nickname}${value ? ` and ${AVATARS[3].nickname}` : ""
+                        } are writing...`}
                 </div>
             </div>
         </div>
