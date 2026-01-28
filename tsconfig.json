@@ -18,15 +18,18 @@
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
-       {
+      {
         "name": "next"
       }
     ],
     "baseUrl": ".",
-    "ignoreDeprecations": "5.0",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@/components/kriyexui/*": [
+        "./components/Kriyexui/*"
       ],
       "@/.source": [
         ".source/server"
