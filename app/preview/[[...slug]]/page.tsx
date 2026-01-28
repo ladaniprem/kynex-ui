@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
+import { ErrorBoundary } from "@/components/ui/error-boundary";
 
 // Arrays to categorize components
 const CENTERED_COMPONENTS = [
@@ -52,10 +53,14 @@ export default async function PreviewPage({
 
         return shouldCenter ? (
             <div className="min-h-screen flex items-center justify-center">
-                <Component />
+                <ErrorBoundary>
+                    <Component />
+                </ErrorBoundary>
             </div>
         ) : (
-            <Component />
+            <ErrorBoundary>
+                <Component />
+            </ErrorBoundary>
         );
     } catch (error) {
         console.error("Error loading component:", error);

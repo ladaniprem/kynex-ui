@@ -28,8 +28,8 @@ export default function Btn03({
         () =>
             Array.from({ length: particleCount }, (_, i) => ({
                 id: i,
-                x: (Math.sin(i * 12.9898 + 78.233) * 43758.5453) % 1 * 360 - 180,
-                y: (Math.cos(i * 4.9898 + 128.233) * 43758.5453) % 1 * 360 - 180,
+                x: (Math.sin(i * 0.1 + 1.1) * 43758.5453) % 1 * 360 - 180,
+                y: (Math.cos(i * 0.1 + 2.3) * 43758.5453) % 1 * 360 - 180,
             })),
         [particleCount]
     );

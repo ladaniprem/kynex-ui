@@ -15,9 +15,11 @@ interface PreviewProps {
   isBlock?: boolean;
 }
 
-const prePath = process.env.VERCEL_PROJECT_PRODUCTION_URL
+const prePath = process.env.NEXT_PUBLIC_VERCEL_URL
+  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+  : process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "http://localhost:3000";
+  : "https://kynex-ui.vercel.app";
 
 export function Preview({
   children,
@@ -28,7 +30,6 @@ export function Preview({
   comment = [],
   isBlock = false,
 }: PreviewProps) {
-  console.log(prePath + link);
   return (
     <>
       <div className={cn("w-full overflow-hidden", className)}>

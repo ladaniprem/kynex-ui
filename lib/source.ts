@@ -11,7 +11,7 @@ interface ExtendedPageData {
     full?: boolean;
 }
 
-// Create the proper source structure
+// Create the proper source structure - map docs to the expected format
 const customSource = {
     files: docs.map((doc: any) => ({
         type: 'page' as const,
@@ -23,14 +23,14 @@ const customSource = {
             toc: doc.toc,
             full: doc.full,
         } as ExtendedPageData,
-        content: doc._exports?.default || doc.default
+        content: doc.default // Try accessing the default export directly
     }))
 };
 
 export const source = loader({
     baseUrl: "/docs",
     source: customSource,
-    icon(icon) {
+    icon(icon?: string) {
         if (!icon) {
             return createElement(icons.Library);
         }
