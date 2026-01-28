@@ -3,7 +3,7 @@ import { Flame, Menu } from "lucide-react";
 import Link from "next/link";
 import { Link as ViewTransitionsLink } from "next-view-transitions";
 import Image from "next/image";
-import { HeaderPro } from "./header-pro";
+import { HeaderPro } from "./Header-pro";
 import { ArrowUpRight } from "lucide-react";
 import { PartyPopper } from "lucide-react";
 

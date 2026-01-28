@@ -1,4 +1,4 @@
-import { Header } from "@/components/landing/header";
+import { Header } from "@/components/landing/Header";
 import {Footer} from "@/components/layout/Footer";
 import { Metadata } from "next";
 
