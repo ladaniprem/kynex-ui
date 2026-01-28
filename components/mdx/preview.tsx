@@ -17,7 +17,7 @@ interface PreviewProps {
 
 const prePath = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "https://ui.Kriyexui.dev";
+  : "http://localhost:3000";
 
 export function Preview({
   children,
@@ -75,3 +75,5 @@ export function Preview({
     </>
   );
 }
+
+export default Preview;
