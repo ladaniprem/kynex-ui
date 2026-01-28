@@ -10,6 +10,8 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import { Preview } from "@/components/mdx/preview";
 import { PreviewClient } from "@/components/mdx/preview-client";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Page(props: {
     params: Promise<{ slug?: string[] }>;
 }) {
@@ -25,13 +27,7 @@ export default async function Page(props: {
             <DocsTitle>{page.data.title}</DocsTitle>
             <DocsDescription>{page.data.description}</DocsDescription>
             <DocsBody>
-                <MDX
-                    components={{
-                        ...defaultMdxComponents,
-                        Preview,
-                        PreviewClient,
-                    }}
-                />
+                <MDX components={{ Preview }} />
             </DocsBody>
         </DocsPage>
     );

@@ -59,16 +59,16 @@ const lineVariants = {
     animate: {
         scaleX: 1,
         x: "0%",
-        transition: { duration: 0.2, ease: "easeOut" },
+        transition: { duration: 0.2 },
     },
     exit: {
         scaleX: 0,
         x: "50%",
-        transition: { duration: 0.2, ease: "easeIn" },
+        transition: { duration: 0.2 },
     },
 };
 
-const transition = { type: "spring", bounce: 0, duration: 0.4 };
+const transition = { type: "spring" as const, bounce: 0, duration: 0.4 };
 
 export function Toolbar({
     className,
