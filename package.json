@@ -6,7 +6,9 @@
     "start": "npm run dev",
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:registry": "tsx ./scripts/build-registry.ts"
+
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
