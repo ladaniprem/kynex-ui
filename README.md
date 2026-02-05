@@ -11,7 +11,6 @@ A modern, comprehensive UI component library built with Next.js 16, React 19, Ty
 - 📚 **Fumadocs** for beautiful documentation
 - 🎭 **Framer Motion** for smooth animations
 - 🌙 **Dark Mode** support
-- 📱 **Mobile Responsive** design
 - 🔧 **Component Library** with 30+ components
 - 📖 **Interactive Documentation** with live previews
 
