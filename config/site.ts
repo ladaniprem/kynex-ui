@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "Kriyex UI",
-    url: "https://kriyexui.com",
+    url: "https://kynex-ui.vercel.app/",
     ogImage: "#",
     description:
         "Copy, Paste, Customize. A collection of modern, interactive, customizable UI components. Quick and easy to use.",

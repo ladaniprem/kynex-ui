@@ -94,7 +94,7 @@ export default function PreviewContent({
 
     const handleTerminalClick = () => {
         const [folder, filename] = link.split("/");
-        const COPY = `npx shadcn-ui@latest add ${prePath}/r/${filename ? filename : folder
+        const COPY = `npx shadcn@latest add ${prePath}/r/${filename ? filename : folder
             }.json`;
         navigator.clipboard.writeText(COPY);
         setIsTerminalCopied(true);
@@ -194,7 +194,7 @@ export default function PreviewContent({
                                     )}
                                 />
                             )}
-                            <span>npx shadcn-ui add {getFileName()}</span>
+                            <span>npx shadcn@latest add {getFileName()}</span>
                         </Button>
 
                         {!isBlock && (
