@@ -39,7 +39,7 @@ import * as docs_32 from "../content/docs/hooks/use-auto-resize-textarea.mdx?col
 // Import your source config
 import * as _source from "../source.config";
 
-// ✅ Use the Fumadocs MDX collections virtual module
+// Use the Fumadocs MDX collections virtual module
 import { docs as createDocs, meta as createMeta } from "fumadocs-mdx:collections/server";
 
 // Export docs & meta
