@@ -8,6 +8,10 @@ interface ClerkProviderWrapperProps {
 const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
 
 export function ClerkProviderWrapper({ children }: ClerkProviderWrapperProps) {
+  if (!publishableKey) {
+    return <>{children}</>
+  }
+
   return (
     <ClerkProvider publishableKey={publishableKey}>
       {children}
