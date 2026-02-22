@@ -17,7 +17,7 @@ const defaultProfile = {
     role: "Product Designer",
     avatar: "https://tse3.mm.bing.net/th/id/OIP.Bxh2xMa5q6QFg9ZnLDFmlgHaMs?rs=1&pid=ImgDetMain&o=7&rm=3",
     location: "San Francisco, CA",
-    email: "hello@Kariyexui.com",
+    email: "hello@Kriyexui.com",
     website: "https://ui.kriyex.dev/",
     bio: "Designing interfaces that bridge the gap between complexity and simplicity.",
 } satisfies Required<Profile02Props>;

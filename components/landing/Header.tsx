@@ -6,6 +6,8 @@ import Image from "next/image";
 import { HeaderPro } from "./header-pro";
 import { ArrowUpRight } from "lucide-react";
 import { PartyPopper } from "lucide-react";
+import { LoginButton } from "@/components/auth/login-button";
+import { LogoutButton } from "@/components/auth/logout-button";
 
 export function Header() {
   return (
@@ -98,6 +100,8 @@ export function Header() {
                 <div className="hidden sm:flex items-center gap-3">
                   <span className="text-zinc-300 dark:text-zinc-700">|</span>
                   {/* <HeaderPro /> */}
+                  <LoginButton />
+                  <LogoutButton />
                   <ThemeToggle />
                 </div>
 
@@ -115,6 +119,8 @@ export function Header() {
                   >
                     Pricing
                   </ViewTransitionsLink>
+                  <LoginButton />
+                  <LogoutButton />
                   <ThemeToggle />
                 </div>
               </div>

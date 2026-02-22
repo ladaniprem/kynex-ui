@@ -26,11 +26,16 @@ export default function Btn03({
     const [isAttracting, setIsAttracting] = useState(false);
     const generateParticles = useCallback(
         () =>
-            Array.from({ length: particleCount }, (_, i) => ({
-                id: i,
-                x: (Math.sin(i * 0.1 + 1.1) * 43758.5453) % 1 * 360 - 180,
-                y: (Math.cos(i * 0.1 + 2.3) * 43758.5453) % 1 * 360 - 180,
-            })),
+            Array.from({ length: particleCount }, (_, i) => {
+                // Use deterministic values based on index to avoid hydration mismatch
+                const angle = (i / particleCount) * Math.PI * 2;
+                const radius = 80 + (i % 3) * 20;
+                return {
+                    id: i,
+                    x: Math.cos(angle) * radius,
+                    y: Math.sin(angle) * radius,
+                };
+            }),
         [particleCount]
     );
     const [particles, setParticles] = useState<Particle[]>(() => generateParticles());

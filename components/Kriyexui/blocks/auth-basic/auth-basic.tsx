@@ -7,14 +7,13 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Eye, EyeOff, Mail, Lock, Chrome, Github, Twitter, ArrowRight } from "lucide-react";
+import { Eye, EyeOff, Mail, Lock, Chrome, Github, Twitter, ArrowRight, User } from "lucide-react";
 
 export default function AuthBasic() {
     const [showPassword, setShowPassword] = useState(false);
@@ -35,92 +34,107 @@ export default function AuthBasic() {
     ];
 
     return (
-        <div className="flex min-h-screen items-center justify-center p-4 bg-gradient-to-br from-red-50 via-white to-red-100 dark:from-red-950 dark:via-black dark:to-red-900">
+        <div className="flex min-h-screen items-center justify-center p-4 bg-neutral-50 dark:bg-neutral-950">
             <div className="w-full max-w-md">
-                {/* Header with Red Theme */}
-                <div className="w-full h-32 mb-6 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl opacity-90"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-white text-center">
-                            <div className="text-3xl font-bold mb-1">Welcome</div>
-                            <div className="text-red-100 text-sm">Sign in to continue</div>
+                {/* Modern Header with Geometric Design */}
+                <div className="w-full mb-8 relative">
+                    <div className="relative h-24 bg-gradient-to-br from-neutral-900 to-neutral-800 dark:from-neutral-100 dark:to-neutral-200 rounded-2xl overflow-hidden">
+                        <div className="absolute inset-0 bg-grid-white/5 dark:bg-grid-black/5"></div>
+                        <div className="absolute top-4 right-4 w-16 h-16 bg-white/10 dark:bg-black/10 rounded-full backdrop-blur-sm"></div>
+                        <div className="absolute bottom-2 left-2 w-12 h-12 bg-white/5 dark:bg-black/5 rounded-lg backdrop-blur-sm"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-center">
+                                <div className="flex items-center justify-center mb-2">
+                                    <div className="w-12 h-12 bg-white dark:bg-black rounded-full flex items-center justify-center shadow-lg">
+                                        <User className="h-6 w-6 text-neutral-900 dark:text-neutral-100" />
+                                    </div>
+                                </div>
+                                <div className="text-white dark:text-neutral-900 text-xl font-bold">Welcome Back</div>
+                                <div className="text-neutral-300 dark:text-neutral-700 text-sm">Enter your space</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <Card className="w-full border-red-200 shadow-xl dark:border-red-800 dark:shadow-red-900/20">
-                    <CardHeader className="space-y-3 pb-6">
-                        <CardTitle className="text-2xl font-bold text-center bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
-                            Sign In
-                        </CardTitle>
-                        <CardDescription className="text-center text-red-600 dark:text-red-400">
-                            Enter your credentials to access your account
-                        </CardDescription>
+                <Card className="w-full border-0 shadow-2xl bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl">
+                    <CardHeader className="space-y-4 pb-8">
+                        <div className="text-center space-y-2">
+                            <CardTitle className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">
+                                Sign In
+                            </CardTitle>
+                            <CardDescription className="text-neutral-600 dark:text-neutral-400 text-base">
+                                Access your personal workspace
+                            </CardDescription>
+                        </div>
                     </CardHeader>
                     
-                    <CardContent className="space-y-6">
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            <div className="space-y-2">
-                                <Label htmlFor="email" className="text-red-700 dark:text-red-300 font-medium">
-                                    Email Address
-                                </Label>
-                                <div className="relative">
-                                    <Mail className="absolute left-3 top-3 h-4 w-4 text-red-500" />
-                                    <Input
-                                        id="email"
-                                        type="email"
-                                        placeholder="Enter your email"
-                                        className="pl-10 border-red-200 focus:border-red-500 focus:ring-red-500 dark:border-red-700 dark:bg-red-950/50"
-                                        required
-                                    />
+                    <CardContent className="space-y-8">
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="space-y-4">
+                                <div className="space-y-2">
+                                    <Label htmlFor="email" className="text-neutral-900 dark:text-neutral-100 font-semibold text-sm uppercase tracking-wide">
+                                        Email Address
+                                    </Label>
+                                    <div className="relative group">
+                                        <div className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-lg transition-all duration-200 group-hover:bg-neutral-200 dark:group-hover:bg-neutral-700"></div>
+                                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-400 z-10" />
+                                        <Input
+                                            id="email"
+                                            type="email"
+                                            placeholder="you@example.com"
+                                            className="relative pl-12 pr-4 h-12 border-0 bg-transparent text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100 z-10"
+                                            required
+                                        />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="space-y-2">
-                                <Label htmlFor="password" className="text-red-700 dark:text-red-300 font-medium">
-                                    Password
-                                </Label>
-                                <div className="relative">
-                                    <Lock className="absolute left-3 top-3 h-4 w-4 text-red-500" />
-                                    <Input
-                                        id="password"
-                                        type={showPassword ? "text" : "password"}
-                                        placeholder="Enter your password"
-                                        className="pl-10 pr-10 border-red-200 focus:border-red-500 focus:ring-red-500 dark:border-red-700 dark:bg-red-950/50"
-                                        required
-                                    />
-                                    <Button
-                                        type="button"
-                                        variant="ghost"
-                                        size="sm"
-                                        className="absolute right-0 top-0 h-full px-3 py-2 text-red-500 hover:text-red-600 hover:bg-red-50"
-                                        onClick={() => setShowPassword(!showPassword)}
-                                    >
-                                        {showPassword ? (
-                                            <EyeOff className="h-4 w-4" />
-                                        ) : (
-                                            <Eye className="h-4 w-4" />
-                                        )}
-                                    </Button>
+                                <div className="space-y-2">
+                                    <Label htmlFor="password" className="text-neutral-900 dark:text-neutral-100 font-semibold text-sm uppercase tracking-wide">
+                                        Password
+                                    </Label>
+                                    <div className="relative group">
+                                        <div className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-lg transition-all duration-200 group-hover:bg-neutral-200 dark:group-hover:bg-neutral-700"></div>
+                                        <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-400 z-10" />
+                                        <Input
+                                            id="password"
+                                            type={showPassword ? "text" : "password"}
+                                            placeholder="••••••••"
+                                            className="relative pl-12 pr-12 h-12 border-0 bg-transparent text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100 z-10"
+                                            required
+                                        />
+                                        <Button
+                                            type="button"
+                                            variant="ghost"
+                                            size="sm"
+                                            className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700 z-10"
+                                            onClick={() => setShowPassword(!showPassword)}
+                                        >
+                                            {showPassword ? (
+                                                <EyeOff className="h-4 w-4" />
+                                            ) : (
+                                                <Eye className="h-4 w-4" />
+                                            )}
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="flex items-center justify-between">
-                                <div className="flex items-center space-x-2">
+                                <div className="flex items-center space-x-3">
                                     <Checkbox
                                         id="remember"
                                         checked={rememberMe}
                                         onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                                        className="border-red-300 text-red-600 focus:ring-red-500"
+                                        className="border-neutral-300 text-neutral-900 focus:ring-neutral-900 dark:border-neutral-600 dark:text-neutral-100 dark:focus:ring-neutral-100"
                                     />
-                                    <Label htmlFor="remember" className="text-sm text-red-600 dark:text-red-400">
-                                        Remember me
+                                    <Label htmlFor="remember" className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
+                                        Remember this device
                                     </Label>
                                 </div>
                                 <Button
                                     type="button"
                                     variant="link"
-                                    className="text-sm text-red-600 hover:text-red-700 p-0 h-auto"
+                                    className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 p-0 h-auto font-medium underline-offset-4"
                                 >
                                     Forgot password?
                                 </Button>
@@ -128,58 +142,58 @@ export default function AuthBasic() {
 
                             <Button
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium shadow-lg hover:shadow-red-500/25 transition-all duration-200"
+                                className="w-full h-12 bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:hover:bg-neutral-200 text-white dark:text-neutral-900 font-semibold text-base shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
                                 disabled={isLoading}
                             >
                                 {isLoading ? (
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent"></div>
                                         Signing in...
                                     </div>
                                 ) : (
-                                    <div className="flex items-center justify-center gap-2">
+                                    <div className="flex items-center justify-center gap-3">
                                         Sign In
-                                        <ArrowRight className="h-4 w-4" />
+                                        <ArrowRight className="h-5 w-5" />
                                     </div>
                                 )}
                             </Button>
                         </form>
 
                         {/* Social Login Section */}
-                        <div className="space-y-4">
+                        <div className="space-y-6">
                             <div className="relative">
-                                <Separator className="bg-red-200 dark:bg-red-800" />
+                                <Separator className="bg-neutral-200 dark:bg-neutral-700" />
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="bg-white dark:bg-black px-2 text-xs text-red-600 dark:text-red-400">
-                                        OR CONTINUE WITH
+                                    <span className="bg-white dark:bg-neutral-900 px-4 text-xs text-neutral-500 dark:text-neutral-400 font-medium uppercase tracking-wide">
+                                        Or continue with
                                     </span>
                                 </div>
                             </div>
                             
-                            <div className="grid grid-cols-3 gap-3">
+                            <div className="grid grid-cols-3 gap-4">
                                 {socialProviders.map((provider) => {
                                     const Icon = provider.icon;
                                     return (
                                         <Button
                                             key={provider.name}
                                             variant="outline"
-                                            className="border-red-200 hover:border-red-300 hover:bg-red-50 dark:border-red-700 dark:hover:bg-red-950/50 dark:hover:border-red-600 transition-all duration-200"
+                                            className="h-12 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800 dark:hover:border-neutral-600 transition-all duration-200 group"
                                         >
-                                            <Icon className="h-4 w-4 text-red-600 dark:text-red-400" />
+                                            <Icon className="h-5 w-5 text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100" />
                                         </Button>
                                     );
                                 })}
                             </div>
                         </div>
 
-                        <div className="text-center">
-                            <p className="text-sm text-red-600 dark:text-red-400">
-                                Don't have an account?{" "}
+                        <div className="text-center pt-4 border-t border-neutral-200 dark:border-neutral-700">
+                            <p className="text-neutral-600 dark:text-neutral-400">
+                                New to our platform?{" "}
                                 <Button
                                     variant="link"
-                                    className="text-red-600 hover:text-red-700 p-0 h-auto font-medium"
+                                    className="text-neutral-900 dark:text-neutral-100 hover:text-neutral-700 dark:hover:text-neutral-300 p-0 h-auto font-semibold underline-offset-4"
                                 >
-                                    Sign up
+                                    Create account
                                 </Button>
                             </p>
                         </div>

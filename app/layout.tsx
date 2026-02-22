@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { RootProvider } from "fumadocs-ui/provider/next";
+import { AuthProvider } from "@/components/auth/auth-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,9 +32,11 @@ export default function RootLayout({
           suppressHydrationWarning
         >
           <RootProvider theme={{ enabled: true }}>
-            <div className="flex flex-col min-h-screen">
-              <div className="flex-1">{children}</div>
-            </div>
+            <AuthProvider>
+              <div className="flex flex-col min-h-screen">
+                <div className="flex-1">{children}</div>
+              </div>
+            </AuthProvider>
           </RootProvider>
         </body>
       </html>
